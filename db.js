@@ -1,10 +1,10 @@
-﻿const mysql = require('mysql2')
+const mysql = require('mysql2')
 
 const pool = mysql.createPool({
-  host: process.env.DB_HOST || 'localhost',
-  user: process.env.DB_USER || 'root',
-  password: process.env.DB_PASSWORD || '',
-  database: process.env.DB_NAME || 'calendly_clone',
+  host: process.env.MYSQLHOST || 'localhost',
+  user: process.env.MYSQLUSER || 'root',
+  password: process.env.MYSQLPASSWORD || '',
+  database: process.env.MYSQLDATABASE || 'calendly_clone',
   waitForConnections: true,
   connectionLimit: 10,
   dateStrings: true,
